@@ -1,0 +1,15 @@
+Person 1: Hey, how's it going?
+Person 2: Not too bad, just trying to stay busy. How about you?
+Person 1: Same here, just keeping busy with work and stuff. Have you been watching any good shows lately?
+Person 2: Yeah, I just started watching this new series on Netflix. It's really good, you should check it out.
+Person 1: Oh, nice! I'll definitely add it to my list. What's it about?
+Person 2: It's a crime thriller with a lot of unexpected twists. I don't want to give too much away, but it's definitely worth watching.
+Person 1: Sounds intriguing. I'll have to give it a try. Thanks for the recommendation!
+Person 2: No problem! Let me know what you think once you start watching it.
+Person 1: Will do! Alright, I better get back to work. Talk to you later!
+Person 2: Yeah, me too. Take care!
+Person 2: Catch you later!
+Person 1: Bye!
+Person 2: Bye! Have a great day at work.
+Person 1: Thanks, you too! And enjoy the show.
+Person 2: Will do. Take care!

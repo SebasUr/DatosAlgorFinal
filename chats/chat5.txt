@@ -1,0 +1,23 @@
+Person 1: Good morning! How are you today?
+Person 2: Do I know you?
+Person 1: I'm your new coworker, we met yesterday.
+Person 2: Oh, right. I don't remember.
+Person 1: Well, I hope we can work well together.
+Person 2: I doubt it.
+Person 1: Is there a problem?
+Person 2: I just prefer to work alone. I hate you
+Person 1: But teamwork can be beneficial.
+Person 2: Not for me.
+Person 1: I see. Well, I'll try to respect that.
+Person 2: Do whatever you want.
+Person 1: I'll do my best to not bother you.
+Person 2: You already are.
+Person 1: I'm sorry to hear that.
+Person 2: Just leave me alone.
+Person 1: Alright, I'll let you be.
+Person 2: Finally, some peace and quiet.
+Person 1: I'll be at my desk if you need anything.
+Person 2: I won't.
+Person 1: Okay, well, have a good day.
+Person 2: Don't count on it.
+

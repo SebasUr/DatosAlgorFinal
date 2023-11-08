@@ -1,0 +1,31 @@
+
+Person 1: Hey, how was your weekend?
+Person 2: It was great! I went hiking with some friends. What about you?
+Person 1: I just chilled at home and caught up on some reading. So, any plans for the upcoming break?
+Person 2: Not really, just thinking of going back home for a few days. What about you?
+Person 1: I might visit my cousin in the city. It's been a while since we hung out.
+Person 2: That sounds fun. Oh, have you finished that assignment for Professor Smith?
+Person 1: Not yet, it's been a struggle finding time to work on it.
+Person 2: I can help you out if you want. We could meet at the library tomorrow.
+Person 1: That would be awesome! Thanks a lot.
+Person 2: No problem, we're in this together. By the way, did you hear about the new cafe that opened downtown?
+Person 1: Yeah, I did. I heard they have the best coffee in town.
+Person 2: We should definitely check it out sometime. Maybe this weekend?
+Person 1: Sounds like a plan. I'll let you know.
+Person 2: Cool. Hey, did you watch the game last night?
+Person 1: Yeah, it was intense! Can't believe they made that comeback in the last quarter.
+Person 2: I know, right? It was unbelievable. I was on the edge of my seat the whole time.
+Person 1: Me too. I thought they were done for, but they really pulled through.
+Person 2: That's the beauty of sports, you never know what's going to happen.
+Person 1: Definitely. So, what classes are you taking next semester?
+Person 2: I'm thinking of taking that psychology course and maybe a creative writing class.
+Person 1: Nice choices. I'm considering a history class and a language course.
+Person 2: That's cool. We should try to sync our schedules so we have some classes together.
+Person 1: That would be great. It's always more fun when we're in the same class.
+Person 2: Absolutely. Oh, before I forget, have you met the new exchange student from Spain?
+Person 1: No, not yet. Is he nice?
+Person 2: Yeah, he's really friendly. He's still getting used to the campus and all, but he's cool.
+Person 1: I'll make sure to introduce myself when I see him around.
+Person 2: You should. He's trying to improve his English, so it'll be good practice for both of you.
+Person 1: That's a good point. I could use some extra speaking practice.
+

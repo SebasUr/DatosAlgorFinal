@@ -33,7 +33,7 @@ class Chat:
 
     def analize_message(self, message):
         message = message.lower()
-        if "love" in message or "like" in message or "kiss" in message or "hug" in message or "date" in message:
+        if "love" in message or "kiss" in message or "hug" in message:
             self.indicators[0] += 1
         if "hate" in message or "kill" in message or "die" in message or "peace" in message:
             self.indicators[1] += 1
@@ -49,14 +49,14 @@ class Chat:
                 self.analize_message(new_message.data)
                 self.add_to_end(new_message)
 
-        if (self.indicators[0] > 1 or self.indicators[1] > 1 or self.indicators[2] > 1 or self.indicators[3] > 1):
-            if(max(self.indicators) == 0):
+        if (self.indicators[0] > 4 or self.indicators[1] > 4 or self.indicators[2] > 4 or self.indicators[3] > 4):
+            if(self.indicators.index(max(self.indicators)) == 0):
                 self.relationship = "Lovers"
-            elif (max(self.indicators) == 1):
+            elif (self.indicators.index(max(self.indicators)) == 1):
                 self.relationship = "Haters"
-            elif (max(self.indicators) == 2):
+            elif (self.indicators.index(max(self.indicators)) == 2):
                 self.relationship = "Coworkers"
-            elif(max(self.indicators) == 3):
+            elif(self.indicators.index(max(self.indicators)) == 3):
                 self.relationship = "Classmates"
 
     def print_list(self):

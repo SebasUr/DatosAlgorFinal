@@ -23,7 +23,6 @@ def main_app():
     num_users = random.randint(5, 15) # Número random de usuarios entre 5 y 15
     # num_users = 30 # Número random de usuarios entre 5 y 15
     names = ["Ana", "Juan", "María", "Carlos", "Laura", "Pedro", "Sofía", "Miguel", "Isabel", "Diego", "Elena", "Javier", "Carmen", "Francisco", "Luis", "Patricia", "Antonio", "Rosa", "José", "Lucía", "Raúl", "Silvia", "Manuel", "Victoria", "Fernando", "Eva", "Alberto", "Natalia", "Roberto", "Marta"]
-
     used_names = []
     # Se ingresan la cantidad de usuarios randoms al grafo
     for _ in range(num_users):
@@ -39,7 +38,6 @@ def main_app():
     # Se agregan las relaciones entre los usuarios existentes en el grafo
     visited_edges_set = set()
     nodes_list = list(graph_users.nodes.keys())
-    num_nodes = len(nodes_list)
     for i in range(1, 25):
         # Intentamos seleccionar nodos diferentes al menos 5 veces
         for _ in range(5):

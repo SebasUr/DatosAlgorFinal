@@ -4,9 +4,10 @@ from modules.Chat import Chat
 import random, os
 from flask import Flask, redirect
 from flask import render_template
+import matplotlib
+matplotlib.use('Agg')
 
 app = Flask(__name__)
-
 
 @app.route("/")
 def home():
@@ -14,10 +15,15 @@ def home():
 
 @app.route("/leaderboard")
 def main_app():
+    filepath = os.path.join("src", "static", "graph.png")
+    if os.path.exists(filepath):
+        os.remove(filepath)
+
     graph_users = Graph()
     num_users = random.randint(5, 15) # Número random de usuarios entre 5 y 15
+    # num_users = 30 # Número random de usuarios entre 5 y 15
     names = ["Ana", "Juan", "María", "Carlos", "Laura", "Pedro", "Sofía", "Miguel", "Isabel", "Diego", "Elena", "Javier", "Carmen", "Francisco", "Luis", "Patricia", "Antonio", "Rosa", "José", "Lucía", "Raúl", "Silvia", "Manuel", "Victoria", "Fernando", "Eva", "Alberto", "Natalia", "Roberto", "Marta"]
-    
+
     used_names = []
     # Se ingresan la cantidad de usuarios randoms al grafo
     for _ in range(num_users):
@@ -62,12 +68,18 @@ def main_app():
 
     users_result = graph_users.get_nodes_with_most_edges()
     users_with_0_edges = graph_users.get_nodes_with_0_edges()
+
+    filepath = os.path.join("src", "static")
+    graph_users.save_graph(filepath)
+
+    edges = graph_users.get_edges()
     result = {
         'popular_users': [users_result[0], users_result[2]],
         'top_3_users': enumerate(users_result[1]),
         'number_edges_top_3': users_result[3],
         'stronger_relationships': [relationship.weight for relationship in graph_users.get_strongest_edge()],
-        'users_with_0_edges': users_with_0_edges
+        'users_with_0_edges': users_with_0_edges,
+        'edges': edges
     }
 
     return render_template("index.html", result=result)

@@ -1,5 +1,7 @@
 from modules.Edge import Edge
 import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use('Agg')
 import networkx as nx
 import os
 
@@ -64,8 +66,6 @@ class Graph:
                 edges.append(edge)
 
         return edges
-    
-
 
     def print_graph(self):
         print("Nodes: ")
@@ -81,9 +81,7 @@ class Graph:
         G.add_nodes_from(self.nodes.keys())
 
         # Agregar aristas al grafo
-        
         for edge in self.edges:
-            print(edge)
             G.add_edge(edge.node1, edge.node2, weight=edge.weight.size)
 
         # Dibujar el grafo
@@ -91,3 +89,7 @@ class Graph:
         nx.draw(G, pos, with_labels=True, font_weight='bold', node_size=700, node_color='skyblue', font_size=8, edge_color='gray', width=1, font_color='black', font_family='Arial')
 
         plt.savefig(os.path.join(path_to_folder, "graph.png"))
+        plt.close()
+
+    def get_edges(self):
+        return self.edges

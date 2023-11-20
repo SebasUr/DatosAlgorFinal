@@ -69,4 +69,4 @@ class Chat:
                 aux = aux.next
 
     def __str__(self):
-        return f"{self.user1} y {self.user2}"
+        return f"{self.user1} y {self.user2} se mandarón {self.size} mensajes"

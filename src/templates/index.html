@@ -45,6 +45,18 @@
         </ol>
     </div>
 
+    <div class="leaderboard">
+        <h1>Personas sin amigos</h1>
+        <ol>
+            {% for weight in result['users_with_0_edges'] %}
+                <li><span class="name">{{ weight }}</span> <span class="score">{{ "😞" }}</span></li>
+            {% endfor %}
+            <!-- <li><span class="name">Persona A</span> <span class="score">800 puntos</span></li>
+            <li><span class="name">Persona B</span> <span class="score">750 puntos</span></li>
+            Agrega más personas según sea necesario -->
+        </ol>
+    </div>
+
     <!-- Agrega más leaderboards según sea necesario -->
 
 </body>

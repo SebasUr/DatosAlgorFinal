@@ -1,7 +1,7 @@
 from modules.Graph import Graph
 from modules.Node import Node
 from modules.Chat import Chat
-import random
+import random, os
 
 if __name__ == "__main__":  
     graph_users = Graph()
@@ -39,7 +39,7 @@ if __name__ == "__main__":
 
         # Crear el chat entre los dos usuarios
         new_chat = Chat(node_a, node_b)
-        new_chat.add_lines(f"./chats/chat{i}.txt")
+        new_chat.add_lines(f"src\chats\chat{i}.txt")
 
         # Hacer que la arista que conecta a los dos usuarios/nodos sea el chat
         graph_users.add_edge(node_a, node_b, new_chat)
@@ -49,22 +49,34 @@ if __name__ == "__main__":
 
     graph_users.print_graph()
 
-    print("\n", "-"*50)
-    # Imprimir los usuarios/nodos con más amigos (Nodos con mayor grado)
-    print("Usuario(s) con más amigos:")
-    popular_users, top_3_users = graph_users.get_nodes_with_most_edges()
-    for user in popular_users:
-        print(f"   - {user}")
+    # print("\n", "-"*50)
+    # # Imprimir los usuarios/nodos con más amigos (Nodos con mayor grado)
+    # print("Usuario(s) con más amigos:")
+    # popular_users, top_3_users = graph_users.get_nodes_with_most_edges()
+    # for user in popular_users:
+    #     print(f"   - {user}")
     
-    # Imprimir el top 3 de usuarios/nodos con más amigos
-    print("\n", "-"*50)
-    print("Top 3 de usuarios con más amigos:")
-    for i in range(len(top_3_users)):
-        print(f"   {i+1}. {top_3_users[i]}")
+    # # Imprimir el top 3 de usuarios/nodos con más amigos
+    # print("\n", "-"*50)
+    # print("Top 3 de usuarios con más amigos:")
+    # for i in range(len(top_3_users)):
+    #     print(f"   {i+1}. {top_3_users[i]}")
 
-    # Imprimir la relación más fuerte entre dos usuarios/nodos
-    print("\n", "-"*50)
-    print("Relación más fuerte entre dos usuarios:")
-    stronger_relationships = graph_users.get_strongest_edge()
-    for relationship in stronger_relationships:
-        print(f"   - {relationship.weight}")
+    # # Imprimir la relación más fuerte entre dos usuarios/nodos
+    # print("\n", "-"*50)
+    # print("Relación más fuerte entre dos usuarios:")
+    # stronger_relationships = graph_users.get_strongest_edge()
+    # for relationship in stronger_relationships:
+    #     print(f"   - {relationship.weight}")
+    
+    # Imprimir los usuarios/nodos con 0 amigos (Nodos con grado 0)
+    # print("\n", "-"*50)
+    # print("Usuarios con 0 amigos:")
+    # nodes_with_0_edges = graph_users.get_nodes_with_0_edges()
+    # for node in nodes_with_0_edges:
+    #     print(f"   - {node}")
+
+    graph_users.print_graph()
+    filepath = os.path.join("src", "static")
+
+    graph_users.save_graph(filepath)

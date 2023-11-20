@@ -61,15 +61,19 @@ def main_app():
         visited_edges_set.add(frozenset([node_a, node_b]))
 
     users_result = graph_users.get_nodes_with_most_edges()
+    users_with_0_edges = graph_users.get_nodes_with_0_edges()
     result = {
         'popular_users': [users_result[0], users_result[2]],
         'top_3_users': enumerate(users_result[1]),
         'number_edges_top_3': users_result[3],
-        'stronger_relationships': [relationship.weight for relationship in graph_users.get_strongest_edge()]
+        'stronger_relationships': [relationship.weight for relationship in graph_users.get_strongest_edge()],
+        'users_with_0_edges': users_with_0_edges
     }
 
     return render_template("index.html", result=result)
     # return render_template("index.html")
+
+    
 
 if(__name__=="__main__"): 
     app.run(debug=True) 

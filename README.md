@@ -15,8 +15,6 @@ No es necesario un entorno virtual, pero es mejor si se usa uno. Se recomienda u
 pip install Flask
 ```
 
-<br/>
-
 ## Ejecución del proyecto
 
 (En la consola/terminal, si se creó un entorno virtual tiene que ser en la misma terminal)

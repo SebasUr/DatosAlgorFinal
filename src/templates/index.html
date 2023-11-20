@@ -7,57 +7,51 @@
     <link rel="shortcut icon" href="{{ url_for('static', filename='icon.svg') }}">
     <title>Chats</title>
 </head>
-<body>
+<div>
+</div class="container">
+<div class="header">
+    <img src="static/logoeafit.png" alt="Logo" class="logo">
+    <h1>Estadísticas de los chats</h1>
+</div>
+        <div class="leaderboard">
+            <h1>Usuario(s) con más amigos</h1>
+            <ol>
+                {% for user in result['popular_users'][0] %}
+                    <li><span class="name">{{ user }}</span> <span class="score">{{ result['popular_users'][1] }} amigos</span></li>
+                {% endfor %}
+                <!-- <li><span class="name">Persona 1</span> <span class="score">1000 puntos</span></li>
+                <li><span class="name">Persona 2</span> <span class="score">950 puntos</span></li>
+                Agrega más personas según sea necesario -->
+            </ol>
+        </div>
 
-    <div class="leaderboard">
-        <h1>Usuario(s) con más amigos</h1>
-        <ol>
-            {% for user in result['popular_users'][0] %}
-                <li><span class="name">{{ user }}</span> <span class="score">{{ result['popular_users'][1] }} amigos</span></li>
-            {% endfor %}
-            <!-- <li><span class="name">Persona 1</span> <span class="score">1000 puntos</span></li>
-            <li><span class="name">Persona 2</span> <span class="score">950 puntos</span></li>
-            Agrega más personas según sea necesario -->
-        </ol>
-    </div>
+        <div class="leaderboard">
+            <h1>Top 3 Usuarios con más amigos</h1>
+            <ol>
+                {% for i, user in result['top_3_users'] %}
+                    <li><span class="name">{{ i+1 }}. {{ user }}</span> <span class="score">{{ result['number_edges_top_3'][i] }} amigos</span></li>
+                {% endfor %}
+                <!-- <li><span class="name">Persona 1</span> <span class="score">1000 puntos</span></li>
+                <li><span class="name">Persona 2</span> <span class="score">950 puntos</span></li>
+                Agrega más personas según sea necesario -->
+            </ol>
+        </div>
 
-    <div class="leaderboard">
-        <h1>Top 3 Usuarios con más amigos</h1>
-        <ol>
-            {% for i, user in result['top_3_users'] %}
-                <li><span class="name">{{ i+1 }}. {{ user }}</span> <span class="score">{{ result['number_edges_top_3'][i] }} amigos</span></li>
-            {% endfor %}
-            <!-- <li><span class="name">Persona 1</span> <span class="score">1000 puntos</span></li>
-            <li><span class="name">Persona 2</span> <span class="score">950 puntos</span></li>
-            Agrega más personas según sea necesario -->
-        </ol>
-    </div>
+        <div class="leaderboard">
+            <h1>Relación(es) más fuerte(s)</h1>
+            <ol>
+                {% for weight in result['stronger_relationships'] %}
+                    <li><span class="name">{{ weight }}</span> <span class="score">{{ weight.relationship }}</span></li>
+                {% endfor %}
+                <!-- <li><span class="name">Persona A</span> <span class="score">800 puntos</span></li>
+                <li><span class="name">Persona B</span> <span class="score">750 puntos</span></li>
+                Agrega más personas según sea necesario -->
+            </ol>
 
-    <div class="leaderboard">
-        <h1>Relación(es) más fuerte(s)</h1>
-        <ol>
-            {% for weight in result['stronger_relationships'] %}
-                <li><span class="name">{{ weight }}</span> <span class="score">{{ weight.relationship }}</span></li>
-            {% endfor %}
-            <!-- <li><span class="name">Persona A</span> <span class="score">800 puntos</span></li>
-            <li><span class="name">Persona B</span> <span class="score">750 puntos</span></li>
-            Agrega más personas según sea necesario -->
-        </ol>
-    </div>
-
-    <div class="leaderboard">
-        <h1>Personas sin amigos</h1>
-        <ol>
-            {% for weight in result['users_with_0_edges'] %}
-                <li><span class="name">{{ weight }}</span> <span class="score">{{ "😞" }}</span></li>
-            {% endfor %}
-            <!-- <li><span class="name">Persona A</span> <span class="score">800 puntos</span></li>
-            <li><span class="name">Persona B</span> <span class="score">750 puntos</span></li>
-            Agrega más personas según sea necesario -->
-        </ol>
-    </div>
-
-    <!-- Agrega más leaderboards según sea necesario -->
-
+        <!-- Agrega más leaderboards según sea necesario -->
+        
+    </div>  
+    <p style="text-align: center; padding: 20px;">Copyright &copy; 2023. Todos los derechos reservados.</p>
+    
 </body>
 </html>

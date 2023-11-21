@@ -2,9 +2,11 @@
 
 Espacio para el desarrollo del proyecto final de Estructuras de Datos y Algoritmos.
 
+### Integrantes: `Daniel Santana Meza`, `Sebastián Andrés Uribe Ruiz` y `David Londoño Palacio`
+
 ## Librerias para el proyecto
 Librerias requeridas para la ejecución en la web:
-`Flask`
+`Flask`, `matplotlib` y `networkx`
 
 ## Instalación
 
@@ -13,6 +15,12 @@ No es necesario un entorno virtual, pero es mejor si se usa uno. Se recomienda u
 
 ```sh
 pip install Flask
+```
+```sh
+pip install matplotlib
+```
+```sh
+pip install networkx
 ```
 
 ## Ejecución del proyecto
